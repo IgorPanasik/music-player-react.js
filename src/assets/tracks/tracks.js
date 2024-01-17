@@ -1,9 +1,9 @@
 const tracks = [
 	{
-		trackPath: './assets/sounds/5utra-davay-sbezhim-iskorki.mp3',
+		trackPath: 'src/assets/sounds/5utra-davay-sbezhim-iskorki.mp3',
 		artistName: '5УТРА',
 		trackName: "Let's Escape",
-		coverPath: './assets/covers/davai-sbejim.jpg',
+		coverPath: 'src/assets/covers/davai-sbejim.jpg',
 	},
 	{
 		trackPath: 'src/assets/sounds/by-indiya-feat-the-limba-money.mp3',
