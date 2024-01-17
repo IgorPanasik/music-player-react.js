@@ -1,0 +1,25 @@
+button.download svg {
+	transition: transform 0.3s ease-in-out;
+}
+
+button.download:hover svg {
+	stroke: #01d625;
+	animation: move-top 0.3s infinite;
+}
+
+@keyframes move-top {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+}
+
+@media screen and (max-width: 700px) {
+	button.download:hover svg {
+		stroke: rgba(91, 92, 91, 0.979);
+		animation: none;
+	}
+}

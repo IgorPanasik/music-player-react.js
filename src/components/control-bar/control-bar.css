@@ -1,0 +1,88 @@
+.control-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 100%;
+}
+
+.buttons-row {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0 20px;
+}
+
+.buttons-row-two {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5px;
+	padding: 0 20px;
+}
+
+.control-traks {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 50%;
+	transition: transform 0.1s ease-in-out;
+}
+
+button:active:not(.shuffle) {
+	transform: scale(0.9);
+}
+
+svg {
+	transition: stroke 0.3s ease-in-out, stroke-width 0.3s ease-in-out;
+	width: 100%;
+	stroke: #49494b;
+}
+
+button:hover svg {
+	filter: url(#shadowFilter);
+	stroke: #7b68ee;
+	stroke-width: 1.3px;
+}
+
+.play,
+.pause {
+	width: 70px;
+	height: 70px;
+}
+
+@media screen and (max-width: 700px) {
+	button:hover svg {
+		stroke: rgba(91, 92, 91, 0.979);
+	}
+
+	button.back:hover::before,
+	button.download:hover::before,
+	button.list:hover::before,
+	button.next:hover::before,
+	button.pause:hover::before,
+	button.play:hover::before,
+	button.prev:hover::before,
+	button.loop:hover::before,
+	button.shuffle:hover::before {
+		content: none;
+		background: transparent;
+		box-shadow: none;
+		opacity: 0;
+		animation: none;
+	}
+}

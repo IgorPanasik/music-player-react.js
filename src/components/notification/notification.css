@@ -1,0 +1,56 @@
+.svg-check {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: #90ee90;
+	width: 150px;
+	border-radius: 7px;
+	position: absolute;
+	top: -10px;
+	right: 63px;
+	padding: 5px;
+	opacity: 0;
+	visibility: hidden;
+	animation: fadeIn 0.3s ease-in;
+	transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+	box-shadow: 0px 0px 7px 5px rgb(179, 179, 179);
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.6;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.svg-check.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+.svg-check svg {
+	width: 37px;
+	height: 37px;
+	stroke: #006400;
+}
+
+.notification {
+	color: #008000;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 500px) {
+	.svg-check {
+		top: -10px;
+		right: 53px;
+	}
+}

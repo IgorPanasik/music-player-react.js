@@ -1,0 +1,27 @@
+.container-snow {
+	position: fixed;
+	top: -7px;
+	left: 20px;
+	right: 20px;
+}
+.container-snow div {
+	user-select: none;
+}
+
+@keyframes fall {
+	0% {
+		transform: translateY(0) rotate(0deg) scale(0.8);
+	}
+	25% {
+		transform: translateY(20vh) rotate(300deg) scale(1);
+	}
+	50% {
+		transform: translateY(40vh) rotate(600deg) scale(0.8);
+	}
+	75% {
+		transform: translateY(60vh) rotate(900deg) scale(1);
+	}
+	100% {
+		transform: translateY(80vh) rotate(1200deg) scale(0.8);
+	}
+}

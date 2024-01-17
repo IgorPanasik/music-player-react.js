@@ -1,0 +1,61 @@
+.shuffle.active-shuffle {
+	position: relative;
+	transition: 0.3s stroke ease-in-out;
+}
+
+.shuffle.active-shuffle::after {
+	position: absolute;
+	content: 'Track List Was Shuffle';
+	top: -70px;
+	right: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(173, 196, 191, 0.747);
+	width: 140px;
+	padding: 7px;
+	border-radius: 5px;
+	font-size: 16px;
+	color: rgb(44, 46, 48);
+	font-family: 'Playfair Display', serif;
+	animation: fadeInOut 2.5s;
+	pointer-events: none;
+}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+button.shuffle svg:hover {
+	stroke: #f30303;
+	animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	25%,
+	75% {
+		transform: translateX(-5px);
+	}
+	50% {
+		transform: translateX(5px);
+	}
+}
+
+@media screen and (max-width: 700px) {
+	button.shuffle svg:hover {
+		animation: none;
+		stroke: rgba(91, 92, 91, 0.979);
+	}
+}

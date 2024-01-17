@@ -1,0 +1,37 @@
+.position-volume {
+	position: relative;
+}
+
+.range {
+	position: absolute;
+	top: 65px;
+	left: -140px;
+	width: 120px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 7px;
+}
+
+.volume {
+	margin-top: 10px;
+}
+
+@keyframes bounce {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	25%,
+	75% {
+		transform: translateY(calc(var(--move) / 2));
+	}
+	50% {
+		transform: translateY(var(--move));
+	}
+}
+
+#Multimedia-\(Color\) path.playing {
+	transition: transform 0.3s ease-in-out;
+	animation: bounce 0.3s ease-in-out infinite;
+}

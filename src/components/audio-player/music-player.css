@@ -1,0 +1,124 @@
+.music-player {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 25px;
+	background: rgb(181, 207, 227);
+	background: radial-gradient(
+		circle,
+		rgba(181, 207, 227, 1) 0%,
+		rgba(247, 233, 233, 1) 46%,
+		rgba(218, 225, 249, 1) 100%
+	);
+	width: 280px;
+	height: 510px;
+	border-radius: 20px;
+	-webkit-box-shadow: 3px 1px 11px 6px rgba(34, 60, 80, 0.16);
+	-moz-box-shadow: 3px 1px 11px 6px rgba(34, 60, 80, 0.16);
+	box-shadow: 3px 1px 11px 6px rgba(34, 60, 80, 0.16);
+}
+
+.speaker {
+	margin-top: -5px;
+	width: 120px;
+	height: 3px;
+	transform: translateY(25px);
+	border-radius: 1.5px;
+	background: rgb(255, 255, 255);
+}
+
+.speaker-bottom {
+	width: 120px;
+	height: 3px;
+	transform: translateY(25px);
+	border-radius: 1.5px;
+	background: rgb(255, 255, 255);
+	margin-top: 10px;
+}
+
+.image-song {
+	margin-top: 20px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 120px;
+	height: 120px;
+	border-radius: 3px;
+	overflow: hidden;
+	position: relative;
+
+	box-shadow: 10px -10px 70px 30px rgba(164, 241, 245, 0.75);
+	-webkit-box-shadow: 10px -10px 70px 30px rgba(164, 241, 245, 0.75);
+	-moz-box-shadow: 10px -10px 70px 30px rgba(164, 241, 245, 0.75);
+}
+
+.image-song.animating {
+	animation: pulse 0.4s infinite alternate;
+}
+
+@keyframes pulse {
+	to {
+		transform: scale(1.1);
+	}
+}
+
+.author-song {
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+}
+
+.track-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 7px;
+	height: 40px;
+}
+
+.loading-icon-container {
+	position: absolute;
+	top: 300px;
+	right: 122px;
+}
+
+.loading-icon {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 35px;
+	height: 35px;
+	border: 3px solid rgba(119, 119, 119, 0.3);
+	border-radius: 50%;
+	border-top-color: #14397c;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.music-player {
+		-webkit-box-shadow: 3px 1px 11px 6px rgba(34, 60, 80, 0.16);
+		-moz-box-shadow: 3px 1px 11px 6px rgba(34, 60, 80, 0.16);
+		box-shadow: 3px 1px 7px 5px rgba(22, 38, 49, 0.16);
+		height: 480px;
+		gap: 20px;
+		max-width: 258px;
+		width: 100%;
+	}
+
+	.loading-icon-container {
+		position: absolute;
+		top: 285px;
+		right: 110px;
+	}
+}
