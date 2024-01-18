@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import tracks from '../../assets/tracks/tracks';
 import ControlBar from '../control-bar/ControlBar';
 import PositionTrack from '../position-track/PositionTrack';
+import SvgRange from '../svg-range/svgRange';
 import './music-player.css';
 
 const AudioPlayer = () => {
@@ -190,6 +191,9 @@ const AudioPlayer = () => {
 				handlePlayPause={handlePlayPause}
 				toggleShuffle={toggleShuffle}
 			/>
+
+			<SvgRange />
+
 			<div className='speaker-bottom'></div>
 		</div>
 	);

@@ -74,7 +74,7 @@ const VolumeControl = ({ isPlaying, audioRef }) => {
 								cursor: 'grab',
 							}}
 						>
-							<div
+							<div className='track'
 								ref={props.ref}
 								style={{
 									height: '3px',

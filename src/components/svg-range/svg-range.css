@@ -1,0 +1,17 @@
+.svgRange {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	bottom: 30px;
+}
+
+#Multimedia-\(Color\) path.playing {
+	transition: transform 0.3s ease-in-out;
+	animation: bounce 0.3s ease-in-out infinite forwards;
+}
+
+@media screen and (min-width: 429px) {
+	.svgRange {
+		display: none;
+	}
+}
